@@ -1,0 +1,97 @@
+@import '../core/reset.styl'
+@import '../core/base.styl'
+
+//HEADER
+.header-section
+    background: url('/static/img/header2_blur.jpg') no-repeat center center
+    background-size: cover
+    height: 30em
+    padding: 9em 2em 5em 2em
+    margin-bottom: 2em
+    width: 100%
+.header-title
+    color: $white
+    text-align:center
+    padding: 2em
+    width: 100%
+.header-title h1
+    font-family: $secondfont
+    font-size: 5em
+.header-title h2
+    font-family: $mainfont
+    font-size: 2em
+
+//PRODUCTS
+.separator
+    border: 1px solid #EFEFEF
+    height: 1px
+    margin: 2em auto
+    width: 5em
+
+.product-img
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center center
+    height: 20em
+    margin: 0 auto
+    width: 70%
+
+.product-details
+    text-align: center
+    margin: 0 auto
+    width: 70%
+
+.product-title
+    font-family: $secondfont
+    font-size: 4em
+
+.product-text
+    font-size: 1.5em
+    padding: 1em 0
+    text-align: left
+
+.footer-section
+    background: $darkgrey
+    height: 30em
+    width: 100%
+
+@media only screen and (min-width: $bp2)
+
+    //HEADER
+    .header-section
+        background: url('/static/img/header1_blur.jpg') no-repeat center center
+        background-size: cover
+        height: 40em
+        margin-bottom: 5em
+
+    .header-title
+        padding: 4em
+
+    .header-title h1
+        font-size: 7em
+
+    .header-title h2
+        font-size: 4em
+
+    //PRODUCTS
+    .separator
+        margin: 5em auto
+        width: 40em
+    .products-section
+        display: inline-block
+        width: 100%
+    .product-img
+        background-size: 200%
+        height: 40em
+    .product-details,.product-img
+        float: left
+        width: 49%
+    .product-title
+        font-size: 6em
+    .product-text
+        margin: 2em auto
+        font-size: 2em
+        width: 70%
+
+    .right
+        float: right
