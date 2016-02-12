@@ -37,6 +37,8 @@ paths = {
     css:       'dist/static/styles/',
     imageSrc:  'app/static/img/**/*',
     imageDist: 'dist/static/img/',
+    fontSrc:   'app/static/fonts/**/*',
+    fontDist:  'dist/static/fonts/',
     jsSrc:     'app/static/js/**/*',
     jsDist:    'dist/static/js/'
 }
@@ -72,6 +74,12 @@ gulp.task('copy-img',function(){
         .pipe(gulp.dest(paths.imageDist))
 });
 
+// Fonts task
+gulp.task('copy-fonts',function(){
+    gulp.src(paths.fontSrc)
+        .pipe(gulp.dest(paths.fontDist))
+});
+
 // JS client task
 gulp.task('copy-js',function(){
     gulp.src(paths.jsSrc)
@@ -98,6 +106,7 @@ gulp.task('default',[
     'stylus',
     'copy-js',
     'copy-img',
+    'copy-fonts',
     'webserver',
     'watch'
 ]);

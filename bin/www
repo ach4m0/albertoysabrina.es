@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('futurearcade:server');
+var debug = require('debug')('albertoysabrina.es:server');
 var http = require('http');
 
 /**

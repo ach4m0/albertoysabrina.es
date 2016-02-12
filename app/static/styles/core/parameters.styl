@@ -1,18 +1,18 @@
 // BREAKPOINTS
 $bp1=   480px
-$bp2=   768px
+$bp2=   627px
 $bp3=   900px
 $bp4=   1100px
 
 // COLOURS
 
 //   Main colours
-$maincolor=          #222222
+$maincolor=          #FC9D9B
 $darkmaincolor=      darken($maincolor, 15%)
 $lightmaincolor=     lighten($maincolor, 15%)
-$secondcolor=        #F80000
+$secondcolor=        #6E8593
 $darksecondcolor=    darken($secondcolor, 15%)
-$lightsecondcolor=   lighten($secondcolor, 15%)
+$lightsecondcolor=   #666
 
 //   Greyscale
 $black=           #000000
@@ -37,10 +37,19 @@ $linkcolorvisited=   darken($linkcolor, 15%)
 $buttoncolor=        $white
 $buttonbackground=   #5BB75B
 
+// FONTS
+@font-face
+    font-family: Arciform
+    src: url("/static/fonts/Arciform.otf") format("opentype")
+
+@font-face
+    font-family: Brusher
+    src: url("/static/fonts/Brusher-Regular.otf") format("opentype")
+
 
 // TYPOGRAPHY
-$mainfont=       'Open Sans', sans-serif, Helvetica, Arial
-$secondfont=     'Munro', Georgia, Times, Times New Roman
+$mainfont=       'Arciform', sans-serif, Helvetica, Arial
+$secondfont=     'Brusher', Georgia, Times, Times New Roman
 
 // BODY PARAMETERS
 $bodybackgroundcolor=    $white

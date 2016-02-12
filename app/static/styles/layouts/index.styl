@@ -1,97 +1,296 @@
 @import '../core/reset.styl'
 @import '../core/base.styl'
 
+.body-container
+    margin-bottom: 100px
+    position: relative
+    z-index: 2
+
 //HEADER
 .header-section
-    background: url('/static/img/header2_blur.jpg') no-repeat center center
-    background-size: cover
-    height: 30em
-    padding: 9em 2em 5em 2em
-    margin-bottom: 2em
+    background: $maincolor
+    width: 100%
+.header-title-box
+    display: inline-block
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5)
+    text-align: center
+    margin-top: 50px
+    padding-top: 50px
     width: 100%
 .header-title
     color: $white
-    text-align:center
-    padding: 2em
-    width: 100%
-.header-title h1
     font-family: $secondfont
-    font-size: 5em
-.header-title h2
-    font-family: $mainfont
-    font-size: 2em
-
-//PRODUCTS
-.separator
-    border: 1px solid #EFEFEF
-    height: 1px
-    margin: 2em auto
-    width: 5em
-
-.product-img
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center center
-    height: 20em
-    margin: 0 auto
-    width: 70%
-
-.product-details
-    text-align: center
-    margin: 0 auto
-    width: 70%
-
-.product-title
+    font-size: 8em
+    text-shadow: 0px 5px 0px rgba(0,0,0,0.5)
+.header-text
+    color: $lightsecondcolor
     font-family: $secondfont
     font-size: 4em
-
-.product-text
+    margin: 1em auto
+    opacity: 0
+    padding: .5em
+    position: relative
+    transform: translateX(-20px)
+    transition: all 0.5s ease-in-out
+    width: 250px
+    &.is-showing
+        opacity: 1
+        transform: translateX(0px)
+.header-date-div
+    background: $white
+    color: $maincolor
+    font-size: 3em
+    padding: 2em 0
+    text-align: center
+    width: 100%
+.header-date
     font-size: 1.5em
-    padding: 1em 0
+    font-family: $secondfont
+//NOSOTROS
+.nosotros-section
+    background: $secondcolor
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.2)
+    overflow: hidden
+.nosotros-pic
+    background: url('/static/img/nosotros.jpg')
+    background-attachment: fixed
+    background-size: 200%
+    background-position: left top
+    background-repeat: repeat-y
+    height: 300px
+    text-align: center
+    padding-top: 100px
+    width: 100%
+.nosotros-pic-title
+    color: $white
+    font-family: $secondfont
+    font-size: 5em
+.nosotros-div-container
+    padding: 5em 0
+.nosotros-div
+    background: $white
+    border-radius: 5px
+    box-shadow: 0px 5px 0px rgba(0,0,0,0.2)
+    margin: 1em auto
+    padding: 2em 1em
+    text-align: center
+    width: 300px
+    opacity: 0
+    position: relative
+    transition: all 1s ease-in-out
+    &.is-showing
+        opacity: 1
+        transform: translateX(0px)
+.nosotros-first
+    transform: translateX(-50px)
+.nosotros-second
+    transform: translateX(50px)
+.nosotros-title
+    font-family: $secondfont
+    font-size: 5em
+    color: $secondcolor
+    text-shadow: 0px 5px 0px rgba(0,0,0,0.2)
+.nosotros-text
+    color: $lightsecondcolor
+    font-size: 1.5em
+    padding: .5em
     text-align: left
+.nosotros-separator
+    height: 1px
+    margin: .5em auto
+    width: 100%
+//GRAN DIA
+.grandia-section
+    background: $darksecondcolor
+    color: $white
+.grandia-pic
+    background: url('/static/img/grandia.jpg')
+    background-attachment: fixed
+    background-size: 300%
+    background-position: center center
+    height: 300px
+    text-align: center
+    padding-top: 100px
+    width: 100%
+.grandia-pic-title
+    color: $white
+    font-family: $secondfont
+    font-size: 5em
+.grandia-details
+    padding: 3em 1em
+    text-align: center
+    margin: 0 auto
+    width: 250px
+.grandia-div
+    padding: 1em
+.grandia-subtitle
+    font-size: 2.5em
+    margin-bottom: 15px
+    text-shadow: 0px 3px 0px rgba(0,0,0,0.5)
+.grandia-text
+    font-size: 1.5em
+    text-align: left
+.grandia-donde
+    padding-bottom: 30px
+.grandia-donde-box
+    background: $white
+    border-radius: 10px
+    box-shadow: 0px 5px 0px rgba(0,0,0,0.5)
+    color: $secondcolor
+    padding: 1.5em 1em
+    margin: 1em auto
+    width: 250px
+    opacity: 0
+    position: relative
+    transition: all 0.5s ease-in-out
+    transform: translateY(100px)
+    text-align: left
+    &.is-showing
+        opacity: 1
+        transform: translateY(0px)
+.grandia-donde-text-deco
+    display: inline-block
+    font-size: 50px
+    position: relative
+    text-align: left
+    top: -20px
+.grandia-donde-text
+    display: inline-block
+    font-size: 1.3em
+.grandia-donde-div-map
+    display: inline-block
+    text-align: center
+    width: 100%
+.grandia-donde-map
+    box-shadow: 0px 5px 0px rgba(0,0,0,0.5)
+    height: 250px
+    width: 90%
+//CONTACTO
+.contacto-section
+    background: $white
+    color: $maincolor
+    padding: 2em
+    text-align: center
+.contacto-title
+    font-family: $secondfont
+    font-size: 5em
+.contacto-text
+    font-size: 1.5em
+    margin: 1em
+.contacto-form
+    font-size: 1.2em
 
+    span
+        font-size: 1.3em
+    input,textarea
+        border-radius: 5px
+        background: $darksecondcolor
+        color: $white
+        display: block
+        margin: 1em auto
+        padding: 1em
+    textarea
+        height: 200px
+        max-width: 340px
+        width: 80%
+    .form-button
+        background: $maincolor
+        color: $white
+        display: block
+        font-family: $mainfont
+        padding: .5em
+        margin: 0 auto
+        width: 100px
+
+    .form-button:hover
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.2)
+        cursor: pointer
+// FOOTER
 .footer-section
-    background: $darkgrey
-    height: 30em
+    background: #222
+    bottom: 0
+    color: $white
+    text-align: center
+    position: fixed
+    height: 100px
     width: 100%
 
+    .footer-div
+        max-width: 640px
+        padding: 2em 0
+        margin: 0 auto
+
+        .footer-text
+            font-size: 1.2em
+
+        .footer-list
+            list-style: none
+            margin-top: 1em
+
+            li
+                display: inline-block
+
+                .footer-social-link
+                    width: 32px
+                    height: 32px
+                    display: block
+                    background-size: cover
+
+.gmail
+    background: url('/static/img/mail.png')
+.twitter
+    background: url('/static/img/twitter.png')
+.github
+    background: url('/static/img/github.png')
+.gplus
+    background: url('/static/img/gplus.png')
+
 @media only screen and (min-width: $bp2)
-
-    //HEADER
-    .header-section
-        background: url('/static/img/header1_blur.jpg') no-repeat center center
-        background-size: cover
-        height: 40em
-        margin-bottom: 5em
-
-    .header-title
-        padding: 4em
-
-    .header-title h1
-        font-size: 7em
-
-    .header-title h2
-        font-size: 4em
-
-    //PRODUCTS
-    .separator
-        margin: 5em auto
-        width: 40em
-    .products-section
+    .header-text
+        font-size: 5em
+    .nosotros-div
         display: inline-block
-        width: 100%
-    .product-img
-        background-size: 200%
-        height: 40em
-    .product-details,.product-img
-        float: left
+        font-size: 1.2em
+        margin: 2em 1em
+        height: 300px
+        width: 400px
+    .nosotros-separator
+        display: none
+    .nosotros-div-container
+        max-width: 1024px
+        text-align: center
+        margin: 0 auto
+    .grandia-pic,.nosotros-pic
+        background-size:150%
+        height: 500px
+        padding-top: 200px
+    .grandia-pic-title,.nosotros-pic-title,.contacto-title
+        font-size: 7em
+    .grandia-details
+        max-width: 800px
+        width: 80%
+    .grandia-div
+        display: inline-block
         width: 49%
-    .product-title
-        font-size: 6em
-    .product-text
-        margin: 2em auto
-        font-size: 2em
-        width: 70%
+    .grandia-donde
+        text-align: center
+    .grandia-donde-box
+        display: inline-block
+        height: 120px
+        position: relative
+        top: -160px
+        width: 300px
+    .grandia-donde-text-deco
+        font-size: 70px
+        top: -30px
+    .grandia-donde-text
+        font-size: 1.5em
+    .grandia-donde-div-map
+        max-width: 500px
+        width: 50%
+    .grandia-donde-map
+        height: 400px
 
-    .right
-        float: right
+@media only screen and (min-width: $bp3)
+    .grandia-div
+        width: 33%
